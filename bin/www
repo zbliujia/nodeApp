@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('untitled3:server');
 var http = require('http');
-
+var global = require('../global');
 /**
  * Get port from environment and store in Express.
  */
@@ -24,6 +24,7 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+global.port = port;
 
 server.listen(port);
 server.on('error', onError);

@@ -56,5 +56,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.global = {};
 
 module.exports = app;
